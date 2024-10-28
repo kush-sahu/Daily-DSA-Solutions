@@ -1,7 +1,7 @@
 class Solution {
     public int longestSquareStreak(int[] nums) {
         HashSet<Integer>set=new HashSet<>();
-        Arrays.sort(nums);
+      Arrays.sort(nums);
         for(int i=0;i<nums.length;i++){
            set.add(nums[i]);
         }
@@ -9,12 +9,10 @@ class Solution {
         for(int i=0;i<nums.length;i++){
         int a=nums[i];
         int c=0;
-        while(set.contains(a)==true){
+        while(set.contains(a)==true ){
             set.remove(a);
             c++;
-             long next = (long) a * a; // Use long to avoid overflow on squaring
-                if (next > Integer.MAX_VALUE) break;
-                a = (int) next;
+            a=a*a;
            
         }
         ans=Math.max(c,ans);
