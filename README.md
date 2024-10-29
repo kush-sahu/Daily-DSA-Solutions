@@ -18,4 +18,4 @@ Each solution is organized by category and difficulty level for easy navigation.
 
 ---
 
-Feel free to replace `"https://example.com/your-profile-image.jpg"` with the actual URL of your LeetCode profile image. You can expand on the sections to include more details if you'd like. Let me know if there’s anything specific you want to adjust!
+Feel free to replace `"(https://leetcode.com/u/kush-sahu/)"` with the actual URL of your LeetCode profile image. You can expand on the sections to include more details if you'd like. Let me know if there’s anything specific you want to adjust!
