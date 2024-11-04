@@ -15,10 +15,10 @@ class Solution {
               }
               
               st++;
-            }else{
+            }
                  set.add(ch);
                 ans=Math.max(end-st+1,ans);
-            }
+            
                 
                 end++;
           
