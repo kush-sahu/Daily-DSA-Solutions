@@ -1,0 +1,1 @@
+<h2>take-k-of-each-character-from-left-and-right Notes</h2><hr>[ Time taken: 2 hrs 12 m 1 s ]
