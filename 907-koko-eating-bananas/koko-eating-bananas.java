@@ -1,31 +1,28 @@
 class Solution {
-    public static int maxElement(int piles[]){
-        int max=Integer.MIN_VALUE;
+    public boolean helper(int piles[],int mid,int h){
+        int c=0;
         for(int i=0;i<piles.length;i++){
-            max=Math.max(max,piles[i]);
-        }return max;
-    }
-    public int hrcount(int []piles , int mid ){
-        int result=0;
-
-        for(int i=0;i<piles.length;i++){
-            result+=Math.ceil((double)piles[i]/(double)mid);
+            c+=Math.ceil((double)piles[i]/(double)mid);
         }
-        return result;
+         if(c<=h)return true;
+        else return false;
+
     }
     public int minEatingSpeed(int[] piles, int h) {
-        int low=1;
-        int high=maxElement(piles);
-        int ans=-1;
-        while(low<=high){
-            int mid=(high+low)/2;
-            int total=hrcount(piles,mid);
-            if(total<=h){
-                ans=mid;
-                high=mid-1;
+        int l=0;
+        int hi=0;
+        for(int i=0;i<piles.length;i++){
+            hi=Math.max(piles[i],hi);
+        }
+        int ans=Integer.MAX_VALUE;
+        while(l<=hi){
+            int mid=l+(hi-l)/2;
+            if(helper(piles,mid,h)==true){
+               ans=Math.min(ans,mid);
+               hi=mid-1;
             }else{
-                low=mid+1;
-             }
+                l=mid+1;
+            }
         }
         return ans;
     }
