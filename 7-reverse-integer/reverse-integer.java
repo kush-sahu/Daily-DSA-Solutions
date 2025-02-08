@@ -14,7 +14,7 @@ class Solution {
         x=x/10;
        }
 
-       if(sign==true){
+       if(sign){
         num=num*(-1);
        } 
 
