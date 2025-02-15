@@ -1,37 +1,43 @@
 class Solution {
-// ho kya tum yaha ? ha   kha error aa raha ? run karo n test case pass nhi ho rahe 3rd vali
-  public boolean isPalandrome(String s ,int i,int j){
-    while(i<j){
-            if(s.charAt(i)==s.charAt(j)){
-         i++;
-         j--;
-            
+    public boolean isPalandrome(String s, int i, int j) {
+        while (i < j) {
+            if (s.charAt(i) != s.charAt(j)) {
+                return false;
+
+            } 
+            i++;
+            j--;
+                
+
         }
-        else
-        return false;
+        return true;
 
-  }
-  return true;
-
-  }
+    }
 
     public boolean validPalindrome(String s) {
         int i = 0;
         int j = s.length()-1;
         while(i<j){
             if(s.charAt(i)==s.charAt(j)){
-         i++;
-         j--;
+           i++;
+           j--;
             
         }
         else{
 
-            return isPalandrome(s,i+1,j) || isPalandrome(s,i,j-1);
+            return (isPalandrome(s,i+1,j) || isPalandrome(s,i,j-1));
         }
-       // return false;
-        }
-  return true;
         }
         
-    
+        return true;
+        }
+        
+    // wrong kyu aa raha mera to submit hogya - pata nhi yaar   kro ab run -nope   -Q husaar submit ho gaya tha n  are wo sirf run kiya tha ha ha
+
+
+
+    // wo test case konse me fail ho raha tha ?  write kro yaha pe -"atbbga"
+    // thumae bhi test case dikh rahe hongi n  - Q thumari submit ho ga
+
 }
+// ye kya all cases // chup ab dry run krne do case k liye -ok *_*
