@@ -12,7 +12,7 @@ class Solution {
             count++;
         }                
 
-    } //wait kyu
+    } 
     if(count !=1){
         flag =false;
         break;
@@ -21,5 +21,3 @@ class Solution {
     return flag;
     }
 }
-
-// kro ngaye thi
