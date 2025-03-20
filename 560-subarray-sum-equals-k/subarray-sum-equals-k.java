@@ -13,9 +13,10 @@ class Solution {
            
            int diff=prefixSum[i]-k;
            if(hm.containsKey(diff)){
-             ans=ans+hm.get(diff);
+            ans=ans+hm.get(diff);
            }
-            hm.put(prefixSum[i],hm.getOrDefault(prefixSum[i],0)+1);
+           hm.put(prefixSum[i],hm.getOrDefault(prefixSum[i],0)+1);
+
            
         }
         return ans;
