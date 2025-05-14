@@ -11,3 +11,5 @@ on s.sales_id=o.sales_id
  group by t.name
  having c.name!="RED" or c.name is null
 )l
+
+
